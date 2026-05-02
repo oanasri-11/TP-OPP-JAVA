@@ -1,11 +1,12 @@
 public class FeedingProg{
+
   private String feedtype;
-  private double quantitypermeal;
+  private double quantity;  // per meal
 
   
-  public FeedingProg(String feedtype, double quantitypermeal) {
+  public FeedingProg(String feedtype, double quantity) {
     this.feedtype = feedtype;
-    this.quantitypermeal = quantitypermeal;
+    this.quantity = quantity;
   }
   
 
