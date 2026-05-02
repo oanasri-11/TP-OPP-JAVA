@@ -3,12 +3,11 @@ public class SoilSensor extends Sensor {
   private double PH;
   private double moisturelevel;
   private double nitrogencontent;
-  public SoilSensor(String uniquecode,double PH,double moisturelevel,double nitrogencontent){
-   // super(uniquecode);
-    this.PH=PH;
-    this.moisturelevel=moisturelevel;
-    this.nitrogencontent=nitrogencontent;
-  }
+
+    public SoilSensor(String code , Geographicalzone zone){
+        super(code, zone);
+    }
+
   public double getPH() {
     return PH;
   }

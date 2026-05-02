@@ -1,20 +1,18 @@
-public class Animal{
+public abstract  class Animal{
+
   private String uniquenumber;
-  private double age;
+  private int age;
   private double weight;
-  private double healthstatus;
-  private double bodytemperature;
-  private String activitylevel;
+  private Healthstatus healthstatus;
+  private BiometricSensor bioSensor ;
+  private GPScollars gps ;
 
 
-
-  public Animal(String uniquenumber, double age, double weight, double healthstatus, double bodytemperature, String activitylevel) {
+  public Animal(String uniquenumber, int age, double weight, Healthstatus healthstatus) {
     this.uniquenumber = uniquenumber;
     this.age = age;
     this.weight = weight;
     this.healthstatus = healthstatus;
-    this.bodytemperature = bodytemperature;
-    this.activitylevel = activitylevel;
   }
 
 
