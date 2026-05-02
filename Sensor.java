@@ -3,11 +3,12 @@ public abstract class Sensor{
   private SensorStatus status ;
   private String code;
   private Geographicalzone zone;
+  private Thershold range ;
 
   public Sensor( String code,Geographicalzone zone){
     this.code=code;
     this.zone = zone;
-
+    
   }
   public String getCode() {
     return code;
