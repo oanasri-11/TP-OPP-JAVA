@@ -1,3 +1,3 @@
-public enum corpsfamilies {
-  CEREALS,VEGETABLES,FRUITS
+public enum Cropsfamilies {
+  CEREALS , VEGETABLES , FRUITS
 }

@@ -1,24 +1,26 @@
 public abstract class Sensor{
-  String private uniquecode;
-  Boolean private islocated;
+  
+  private SensorStatus status ;
+  private String code;
+  private Geographicalzone zone;
 
-  public Sensor( String uniquecode,Boolean islocated){
-    this.uniquecode=uniquecode;
-    this.islocated=islocated;
+  public Sensor( String code,Geographicalzone zone){
+    this.code=code;
+    this.zone = zone;
 
   }
-  public String getUniquecode() {
-    return uniquecode;
+  public String getCode() {
+    return code;
   }
   
-  public String getIslocated() {
-    return islocated;
+  public Geographicalzone  getZone() {
+    return zone;
   }
-  public void setUniquecode(String uniquecode) {
-    this.uniquecode = uniquecode;
+  public void setCode(String code) {
+    this.code = code;
   }
-  public void setIslocated(Boolean islocated) {
-    this.islocated = islocated;
+  public void setZone(Geographicalzone zone) {
+    this.zone = zone;
   }
   
   

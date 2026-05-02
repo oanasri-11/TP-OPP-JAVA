@@ -1,9 +1,17 @@
+
+import java.time.LocalDate;
+
 public class Crop {
 
-  private String Plantingdate;
-  private String Harvestingdate;
+  private Cropsfamilies family;
+  private LocalDate Plantingdate;
+  private LocalDate Harvestingdate;
+  private GrowthStage growthStage;
+  private SoilRequirments soilReq;
+  private EnviroSensor envSensor;
+  private SoilSensor soilSensor;
   
-  public Crop(String Plantingdate,String Harvestingdate){
+  public Crop(LocalDate Plantingdate, LocalDate Harvestingdate){
     this.Plantingdate=Plantingdate;
     this.Harvestingdate=Harvestingdate;
   }

@@ -1,10 +1,13 @@
-public abstract  class geographicalzone {
-  private String name;
+public abstract  class Geographicalzone {
+  
+  protected  String code;
+  protected  String name;
+  protected  ZoneStatus status;
 
-  private String codezone;
-  public geographicalzone(String name, String codezone) {
+
+  public Geographicalzone(String name, String code) {
     this.name = name;
-    this.codezone = codezone;
+    this.code = code;
   }
 
 
