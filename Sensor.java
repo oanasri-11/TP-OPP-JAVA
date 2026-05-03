@@ -5,9 +5,10 @@ public abstract class Sensor{
   private Geographicalzone zone;
   private Thershold range ;
 
-  public Sensor( String code,Geographicalzone zone){
-    this.code=code;
+  public Sensor( String code , Geographicalzone zone , double min , double max){
+    this.code = code;
     this.zone = zone;
+    range = new Thershold(min , max);
     
   }
   public String getCode() {
