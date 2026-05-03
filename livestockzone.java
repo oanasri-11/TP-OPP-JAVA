@@ -34,4 +34,16 @@ public Livestockzone(String name) {
     }
 
 
+  public void displayReadings(){
+
+      for(BiometricSensor s : bioSensors){
+        s.displayReading();
+      }
+
+      for(GPScollars s : gpsCollars){
+        s.displayReading();
+      }
+
+  }
+
 }

@@ -28,4 +28,12 @@ public Aquaculturezone(String name) {
                 
         }
     }
+
+  public void displayReadings(){
+      for(WaterSensor s : waterSensors){
+        s.displayReading();
+      }
+  }
+
+
 }

@@ -14,8 +14,12 @@ public abstract  class Geographicalzone {
     this.code = numZones;
   }
 
+  public int getCode(){
+      return code;
+  }
+
 
   abstract void addSensor(SensorType type , double min , double max ) throws WrongTypeSensorException;
-
+  abstract void displayReadings();
   
 }

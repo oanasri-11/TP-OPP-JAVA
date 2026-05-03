@@ -28,4 +28,12 @@ public class SoilSensor extends Sensor {
     this.nitrogencontent=nitrogencontent;
   }
 
+  public void displayReading(){
+    System.out.println("Soil Sensor #" + code +" of crop zone #"+ zone.getCode()+" :" );
+    System.out.println(" - PH : "+PH );
+    System.out.println(" - Moisture level : " + moisturelevel );
+    System.out.println(" - Nistrogen content : "+ nitrogencontent );
+
+  }
+
 }

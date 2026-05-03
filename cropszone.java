@@ -34,4 +34,15 @@ public class Cropszone extends Geographicalzone{
         }
     }
 
+  public void displayReadings(){
+      for(Sensor s : envSensors){
+        s.displayReading();
+      }
+
+      for(Sensor s : soilSensors){
+        s.displayReading();
+      }
+  }
+
+
 }

@@ -7,6 +7,11 @@ public class WaterSensor extends Sensor{
         super(zone, min , max);
     }
 
+    public void displayReading(){
+        System.out.println("Water Sensor #" + code +" of Aquaculture zone #"+ zone.getCode()+" :" );
+        System.out.println(" - temperature : "+temperature );
+        System.out.println(" - dissolved Oxygen : "+dissolvedOxygen );
 
+    }
 
 }

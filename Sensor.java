@@ -6,11 +6,11 @@ public abstract class Sensor{
   
   static int numSensors = 0;
 
-  private SensorStatus status = SensorStatus.Acitve;
-  private int code;
-  private Geographicalzone zone;
-  private Thershold range ;
-  private List<Readings> readingsHistory;
+  protected SensorStatus status = SensorStatus.Acitve;
+  protected int code;
+  protected Geographicalzone zone;
+  protected Thershold range ;
+  protected List<Readings> readingsHistory;
 
   public Sensor(  Geographicalzone zone , double min , double max){
     numSensors ++;
@@ -36,4 +36,6 @@ public abstract class Sensor{
     return readingsHistory;
   }
   
+  abstract void displayReading();
+
 }

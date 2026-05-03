@@ -12,5 +12,11 @@ public class BiometricSensor extends Sensor{
     }
 
 
+    public void displayReading(){
+        System.out.println("Biometric Sensor #" + code +" of Livestock zone #"+ zone.getCode()+" :" );
+        System.out.println(" - body temperature : "+bodytemperature );
+        System.out.println(" - activity level : "+activitylevel );
+    }
+
 
 }
