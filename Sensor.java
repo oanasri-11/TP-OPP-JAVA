@@ -32,5 +32,8 @@ public abstract class Sensor{
     this.zone = zone;
   }
   
+  public List<Readings> getReadingsHistory(){
+    return readingsHistory;
+  }
   
 }
