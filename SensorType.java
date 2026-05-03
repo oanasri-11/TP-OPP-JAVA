@@ -1,3 +1,3 @@
 public enum SensorType{
-    enviroSensor , soilSensor , biometricSensor , gpsSensor , waterSensor
+    enviroSensor , soilSensor , biometricSensor , gpsCollars , waterSensor
 }

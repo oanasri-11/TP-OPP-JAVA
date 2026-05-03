@@ -15,7 +15,7 @@ public abstract  class Geographicalzone {
   }
 
 
-  abstract void addSensor(Sensor s);
+  abstract void addSensor(SensorType type , double min , double max ) throws WrongTypeSensorException;
 
   
 }

@@ -18,8 +18,20 @@ public class Cropszone extends Geographicalzone{
         soilSensors = new ArrayList<>();
     }
 
-    public void addSensor(Sensor s){
-
+    public void addSensor(SensorType type , double min , double max) throws WrongTypeSensorException{
+        switch(type){
+            case enviroSensor :
+                envSensors.add(new EnviroSensor(this , min , max));
+                break;
+            
+            case soilSensor :
+                soilSensors.add(new SoilSensor(this , min , max));
+                break;
+            
+            default :
+                throw new WrongTypeSensorException();
+                
+        }
     }
 
 }
