@@ -1,6 +1,6 @@
 public class ReadingPosition extends Readings {
 
-    private double y = 0f;
+    private double y = 0;
 
 
     public double getXvalue(){
