@@ -1,14 +1,19 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aquaculturezone extends Geographicalzone{
    
 
-private WaterSensor waterSensor;
+private List<WaterSensor> waterSensor;
 private int numAnimals;
 private AnimalSpecie specie ;
 private FeedingProg feedProg ;
 
 
-public Aquaculturezone(String name, String code) {
-    super(name, code);
+public Aquaculturezone(String name) {
+    super(name);
+    waterSensor = new ArrayList<>();
   }
 
 }

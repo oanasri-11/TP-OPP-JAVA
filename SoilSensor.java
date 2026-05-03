@@ -4,8 +4,8 @@ public class SoilSensor extends Sensor {
   private double moisturelevel;
   private double nitrogencontent;
 
-    public SoilSensor(String code , Geographicalzone zone , double min , double max){
-        super(code, zone , min , max);
+    public SoilSensor(Geographicalzone zone , double min , double max){
+        super(zone , min , max);
     }
 
   public double getPH() {

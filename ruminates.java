@@ -1,7 +1,9 @@
 public class Ruminates extends Livestockzone{
 
-public Ruminates(String name, String code) {
-    super(name, code);
+private double milk_yield;
+
+public Ruminates(String name) {
+    super(name);
   }
 
 }

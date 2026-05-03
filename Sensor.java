@@ -1,26 +1,27 @@
 public abstract class Sensor{
   
+  static int numSensors = 0;
+
   private SensorStatus status ;
-  private String code;
+  private int code;
   private Geographicalzone zone;
   private Thershold range ;
 
-  public Sensor( String code , Geographicalzone zone , double min , double max){
-    this.code = code;
+  public Sensor(  Geographicalzone zone , double min , double max){
+    numSensors ++;
+    this.code = numSensors;
     this.zone = zone;
     range = new Thershold(min , max);
     
   }
-  public String getCode() {
+  public int getCode() {
     return code;
   }
   
   public Geographicalzone  getZone() {
     return zone;
   }
-  public void setCode(String code) {
-    this.code = code;
-  }
+
   public void setZone(Geographicalzone zone) {
     this.zone = zone;
   }

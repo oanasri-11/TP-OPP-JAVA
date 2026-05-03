@@ -1,7 +1,9 @@
 public class Poultry extends Livestockzone{
 
-    public Poultry(String name, String code) {
-        super(name, code);
+    private int egg_count = 0;
+
+    public Poultry(String name) {
+        super(name);
     }
 
 }

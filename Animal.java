@@ -4,8 +4,6 @@ public abstract  class Animal{
   private int age;
   private double weight;
   private Healthstatus healthstatus;
-  private BiometricSensor bioSensor ;
-  private GPScollars gps ;
 
 
   public Animal(String uniquenumber, int age, double weight, Healthstatus healthstatus) {

@@ -8,8 +8,6 @@ public class Crop {
   private LocalDate Harvestingdate;
   private GrowthStage growthStage;
   private SoilRequirments soilReq;
-  private EnviroSensor envSensor;
-  private SoilSensor soilSensor;
   
   public Crop(LocalDate Plantingdate, LocalDate Harvestingdate){
     this.Plantingdate=Plantingdate;

@@ -1,16 +1,21 @@
 public abstract  class Geographicalzone {
   
-  protected  String code;
+  static int numZones = 0;
+
+  protected  int code;
   protected  String name;
   protected  ZoneStatus status;
   protected  ProductionRecord record ;
-  
 
-  public Geographicalzone(String name, String code) {
+  
+  public Geographicalzone(String name) {
+    numZones ++ ;
     this.name = name;
-    this.code = code;
+    this.code = numZones;
   }
 
+
+  abstract void addSensor(Sensor s);
 
   
 }
