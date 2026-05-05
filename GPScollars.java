@@ -13,4 +13,9 @@ public class GPScollars extends Sensor{
         System.out.println(" - longitude : "+longitude );
     }
 
+    public void sendReading(){
+        ReadingPosition read = new ReadingPosition(longitude , latitude , new Thershold(0.0 , zone.getLongitude()) , new Thershold(0.0 , zone.getLatitude()));
+        readingsHistory.add(read);
+    }
+
 }

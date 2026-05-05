@@ -1,7 +1,7 @@
 public class SoilSensor extends Sensor {
   
   private double PH;
-  private double moisturelevel;
+  private int moisturelevel;
   private double nitrogencontent;
 
     public SoilSensor(Geographicalzone zone , double min , double max){
@@ -11,7 +11,7 @@ public class SoilSensor extends Sensor {
   public double getPH() {
     return PH;
   }
-  public double getMoisturelevel() {
+  public int getMoisturelevel() {
     return moisturelevel;
   }
   public double getNitrogencontent() {
@@ -21,7 +21,7 @@ public class SoilSensor extends Sensor {
     this.PH=PH;
 
   }
-  public void setMoisturelevel(double moisturelevel){
+  public void setMoisturelevel(int moisturelevel){
     this.moisturelevel=moisturelevel;
   }
   public void setNitrogencontent(double nitrogencontent){
@@ -35,5 +35,15 @@ public class SoilSensor extends Sensor {
     System.out.println(" - Nistrogen content : "+ nitrogencontent );
 
   }
+
+  public void sendReading(){
+      Readings read = new Readings(PH ,range);
+      readingsHistory.add(read);
+      read = new Readings(moisturelevel ,range);
+      readingsHistory.add(read);
+      read = new Readings(nitrogencontent ,range);
+      readingsHistory.add(read);
+  }
+
 
 }

@@ -10,8 +10,8 @@ private List<GPScollars> gpsCollars ;
 private  List<Animal> animals;
 private FeedingProg feedProg ;
 
-public Livestockzone(String name) {
-    super(name);
+public Livestockzone(String name , double L , double l) {
+    super(name , L  , l);
     animals = new ArrayList<>();
     bioSensors = new ArrayList<>();
     gpsCollars = new ArrayList<>();

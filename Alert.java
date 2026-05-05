@@ -1,9 +1,15 @@
-import java.util.List;
+import java.util.Date;
 
 public class Alert{
     
-    static private List<Alert> alertsHistory;
     private Readings read ;
+    private Date date;
     private SeverityLevel lvl ;
   
+    public Alert(SeverityLevel lvl , Readings read){
+        this.lvl = lvl;
+        this.read = read;
+        this.date = read.getDate();
+    }
+
 }

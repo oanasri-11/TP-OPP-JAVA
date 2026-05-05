@@ -15,4 +15,14 @@ public class EnviroSensor extends Sensor {
         System.out.println(" - rainfall : "+rainfall );
     }
 
+  public void sendReading(){
+      Readings read = new Readings(temperature ,range);
+      readingsHistory.add(read);
+      read = new Readings(humidity ,range);
+      readingsHistory.add(read);
+      read = new Readings(rainfall ,range);
+      readingsHistory.add(read);
+  }
+
+
 }

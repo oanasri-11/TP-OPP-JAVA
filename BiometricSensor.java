@@ -18,5 +18,12 @@ public class BiometricSensor extends Sensor{
         System.out.println(" - activity level : "+activitylevel );
     }
 
+  public void sendReading(){
+      Readings read = new Readings(bodytemperature ,range);
+      readingsHistory.add(read);
+      read = new Readings(activitylevel ,range);
+      readingsHistory.add(read);
+  }
+
 
 }

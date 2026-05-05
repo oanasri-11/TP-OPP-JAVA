@@ -11,8 +11,8 @@ public class Cropszone extends Geographicalzone{
     private List<Crop> crop_fields ;
     
 
-    public Cropszone(String name) {
-        super(name);
+    public Cropszone(String name , double L , double l) {
+        super(name , L , l);
         crop_fields = new ArrayList<>();
         envSensors = new ArrayList<>();
         soilSensors = new ArrayList<>();
@@ -35,11 +35,11 @@ public class Cropszone extends Geographicalzone{
     }
 
   public void displayReadings(){
-      for(Sensor s : envSensors){
+      for(EnviroSensor s : envSensors){
         s.displayReading();
       }
 
-      for(Sensor s : soilSensors){
+      for(SoilSensor s : soilSensors){
         s.displayReading();
       }
   }

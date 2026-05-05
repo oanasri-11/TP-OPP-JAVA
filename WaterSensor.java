@@ -9,9 +9,16 @@ public class WaterSensor extends Sensor{
 
     public void displayReading(){
         System.out.println("Water Sensor #" + code +" of Aquaculture zone #"+ zone.getCode()+" :" );
-        System.out.println(" - temperature : "+temperature );
+        System.out.print(" - temperature : "+temperature );
         System.out.println(" - dissolved Oxygen : "+dissolvedOxygen );
 
+    }
+
+    public void sendReading(){
+        Readings read = new Readings(temperature ,range);
+        readingsHistory.add(read);
+        read = new Readings(dissolvedOxygen ,range);
+        readingsHistory.add(read);
     }
 
 }

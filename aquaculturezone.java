@@ -11,8 +11,8 @@ private AnimalSpecie specie ;
 private FeedingProg feedProg ;
 
 
-public Aquaculturezone(String name) {
-    super(name);
+public Aquaculturezone(String name , double L , double l) {
+    super(name , L , l);
     waterSensors = new ArrayList<>();
   }
 

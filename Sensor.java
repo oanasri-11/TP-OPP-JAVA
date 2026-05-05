@@ -31,11 +31,20 @@ public abstract class Sensor{
   public void setZone(Geographicalzone zone) {
     this.zone = zone;
   }
+
+  public SensorStatus getStatus(){
+    return status;
+  }
   
+  public void setStatus(SensorStatus st){
+     this.status = st ;
+  }
+
   public List<Readings> getReadingsHistory(){
     return readingsHistory;
   }
   
   abstract void displayReading();
+  abstract void sendReading();
 
 }
