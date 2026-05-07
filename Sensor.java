@@ -4,6 +4,7 @@ import java.util.List;
 
 public abstract class Sensor{
   
+  static private List<Sensor> sensors = new ArrayList<>();
   static int numSensors = 0;
 
   protected SensorStatus status = SensorStatus.Acitve;
@@ -18,6 +19,7 @@ public abstract class Sensor{
     this.zone = zone;
     range = new Thershold(min , max);
     readingsHistory = new ArrayList<>();
+    sensors.add(this);
   }
 
   public int getCode() {

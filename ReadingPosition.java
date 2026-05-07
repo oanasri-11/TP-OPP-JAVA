@@ -4,10 +4,10 @@ public class ReadingPosition extends Readings {
 
 
     public ReadingPosition(double x , double y , Thershold range , Thershold range2){
-        super(x , range);
+        this.x = x;
         this.y = y;
-        if(!range2.isinRange(y)){
-            generateAlert();
+        if(!range2.isinRange(x) || !range2.isinRange(y)){
+            Alert.generateAlert(this);
         }
     }
 
@@ -24,5 +24,10 @@ public class ReadingPosition extends Readings {
         this.x = x;
         this.y = y;
     }
+
+    public String getReadingInString(){
+        return "x: "+x+"   y: " +y ;
+    }
+
 
 }
