@@ -3,7 +3,9 @@ public class ReadingPosition extends Readings {
     private double y = 0;
 
 
-    public ReadingPosition(double x , double y , Thershold range , Thershold range2){
+    public ReadingPosition(double x , double y , Thershold range , Thershold range2  , Geographicalzone zone , Sensor sensor){
+        this.sensor = sensor;
+        this.zone = zone;
         this.x = x;
         this.y = y;
         if(!range2.isinRange(x) || !range2.isinRange(y)){

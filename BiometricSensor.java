@@ -19,9 +19,9 @@ public class BiometricSensor extends Sensor{
     }
 
   public void sendReading(){
-      Readings read = new Readings(bodytemperature ,range);
+      Readings read = new Readings(bodytemperature ,range , zone , this);
       readingsHistory.add(read);
-      read = new Readings(activitylevel ,range);
+      read = new Readings(activitylevel ,range , zone , this);
       readingsHistory.add(read);
   }
 

@@ -6,6 +6,7 @@ public class Aquaculturezone extends Geographicalzone{
    
 
 private List<WaterSensor> waterSensors;
+private List<Animal> aquacultureSpecies ;
 private int numAnimals;
 private AnimalSpecie specie ;
 private FeedingProg feedProg ;
@@ -14,6 +15,7 @@ private FeedingProg feedProg ;
 public Aquaculturezone(String name , double L , double l) {
     super(name , L , l);
     waterSensors = new ArrayList<>();
+    aquacultureSpecies = new ArrayList<>();
   }
 
 

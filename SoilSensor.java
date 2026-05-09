@@ -37,11 +37,11 @@ public class SoilSensor extends Sensor {
   }
 
   public void sendReading(){
-      Readings read = new Readings(PH ,range);
+      Readings read = new Readings(PH ,range , zone);
       readingsHistory.add(read);
-      read = new Readings(moisturelevel ,range);
+      read = new Readings(moisturelevel ,range , zone);
       readingsHistory.add(read);
-      read = new Readings(nitrogencontent ,range);
+      read = new Readings(nitrogencontent ,range , zone);
       readingsHistory.add(read);
   }
 

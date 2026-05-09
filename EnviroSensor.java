@@ -16,11 +16,11 @@ public class EnviroSensor extends Sensor {
     }
 
   public void sendReading(){
-      Readings read = new Readings(temperature ,range);
+      Readings read = new Readings(temperature ,range , zone , this);
       readingsHistory.add(read);
-      read = new Readings(humidity ,range);
+      read = new Readings(humidity ,range , zone , this);
       readingsHistory.add(read);
-      read = new Readings(rainfall ,range);
+      read = new Readings(rainfall ,range , zone , this);
       readingsHistory.add(read);
   }
 

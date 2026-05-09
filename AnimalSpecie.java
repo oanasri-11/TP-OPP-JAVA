@@ -1,3 +1,3 @@
 public enum AnimalSpecie{
-    fish , shrimp 
+    ruminant , poultry , fish , shrimp 
 }

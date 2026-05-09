@@ -49,12 +49,16 @@ public class Alert implements Comparable<Alert>{
         return alertsHistory;
     }
 
+    public Readings getReading(){
+        return read;
+    }
+
     public void display(){
         String level ;
         if(lvl == SeverityLevel.warning) level = "waring";
         else level = "critical";
 
-        System.out.println("\nAlert #" + code + " :");
+        System.out.println("Alert #" + code + " :");
         System.out.println("\tSeverity Level : "+ level +" | Date : "+ date +" | ");
         System.out.println("\tReading reason : Reading #"+ read.getCode() +":");
         System.out.println("\t\texceeding value : " + read.getReadingInString());
