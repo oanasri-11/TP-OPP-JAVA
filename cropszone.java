@@ -9,6 +9,7 @@ public class Cropszone extends Geographicalzone{
     private List<SoilSensor> soilSensors;
 
     private List<Crop> crop_fields ;
+   // private List<Crop> crops=new Arraylist<Crop>();
     
 
     public Cropszone(String name , double L , double l) {
@@ -43,6 +44,26 @@ public class Cropszone extends Geographicalzone{
         s.displayReading();
       }
   }
+  public void addcrop(Crop c){
+      crop_fields.add(c);
+  }
+  public void displayoverview(){
+    super.displayoverview();
+    System.out.println("Number of enviromental sensors : " + envSensors.size());
+    System.out.println("Number of soil sensors : " + soilSensors.size());
+    System.out.println("Number of crop fields : " + crop_fields.size());
+  }
+  public void recordProduction(double yieldAmount){
+
+    if (this.record != null) {
+            
+            this.record.recordCropYield(yieldAmount);
+            System.out.println("Production recorded: " + yieldAmount + " units for zone " + this.name);
+        } else {
+            System.out.println("No production record available for zone " + this.name);
+        }
+  }
+
 
 
 }

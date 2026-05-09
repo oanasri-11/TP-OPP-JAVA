@@ -9,15 +9,31 @@ public abstract  class Geographicalzone {
 
   protected double longitude;
   protected double latitude;
+  private List<Sensor> sensors = new ArrayList<>();
+
 
   
-  public Geographicalzone(String name , double L , double l) {
+  public Geographicalzone(String name , double longitude , double latitude) {
     numZones ++ ;
+    this.name = name;
+    this.longitude = longitude;
+    this.latitude = latitude;
+    this.code = numZones;
+  }
+  public void editzone(String name , double L , double l){
     this.name = name;
     longitude = L;
     latitude = l;
-    this.code = numZones;
   }
+  public void deactivate(){
+    this.status = ZoneStatus.SUSPENDED;
+    for(Sensor s : sensors){
+      s.SetStatus(SensorStatus.INACTIVE);
+    }
+  }
+  
+  public abstract void displayOverview();
+  public abstract void recordProduction(double value);
 
   public int getCode(){
       return code;
@@ -34,5 +50,6 @@ public abstract  class Geographicalzone {
 
   abstract void addSensor(SensorType type , double min , double max ) throws WrongTypeSensorException;
   abstract void displayReadings();
+
   
 }

@@ -36,6 +36,14 @@ public Aquaculturezone(String name , double L , double l) {
         s.displayReading();
       }
   }
+  public void addAnimal(Animal a){
+      aquacultureSpecies.add(a);
+      numAnimals++;
+  }
+    public void setFeedingProg(FeedingProg f){
+        feedProg = f;
+    }
+    
 
 
 }

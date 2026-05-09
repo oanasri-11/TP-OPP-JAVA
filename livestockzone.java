@@ -44,6 +44,14 @@ public Livestockzone(String name , double L , double l) {
         s.displayReading();
       }
 
+
   }
+  public void addAnimal(Animal a){
+      animals.add(a);
+  }
+  public void setFeedingProg(FeedingProg f){
+      feedProg = f;
+  }
+  
 
 }
