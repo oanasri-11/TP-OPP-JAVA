@@ -9,7 +9,6 @@ public abstract  class Geographicalzone {
 
   protected double longitude;
   protected double latitude;
-  private List<Sensor> sensors = new ArrayList<>();
 
 
   
@@ -25,14 +24,9 @@ public abstract  class Geographicalzone {
     longitude = L;
     latitude = l;
   }
-  public void deactivate(){
-    this.status = ZoneStatus.SUSPENDED;
-    for(Sensor s : sensors){
-      s.SetStatus(SensorStatus.INACTIVE);
-    }
-  }
+  abstract  void deactivate();
   
-  public abstract void displayOverview();
+  public abstract void displayOverView();
   public abstract void recordProduction(double value);
 
   public int getCode(){

@@ -33,10 +33,9 @@ public abstract  class Animal{
     return healthstatus;
   }
 
-  public void loghealsthevent(HelthStatus stat,double newweight){
-    this.stat=stat;
-    this.weight=newweight;
-    
+  public void loghealsthevent(Healthstatus status ,double weight){
+    this.healthstatus = status;
+    this.weight = weight; 
   }
 
 

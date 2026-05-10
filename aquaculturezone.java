@@ -7,7 +7,6 @@ public class Aquaculturezone extends Geographicalzone{
 
 private List<WaterSensor> waterSensors;
 private List<Animal> aquacultureSpecies ;
-private int numAnimals;
 private AnimalSpecie specie ;
 private FeedingProg feedProg ;
 
@@ -38,12 +37,25 @@ public Aquaculturezone(String name , double L , double l) {
   }
   public void addAnimal(Animal a){
       aquacultureSpecies.add(a);
-      numAnimals++;
   }
     public void setFeedingProg(FeedingProg f){
         feedProg = f;
     }
     
+    public void deactivate(){
+        this.status = ZoneStatus.SUSPENDED;
+        for(Sensor s : waterSensors){
+            s.setStatus(SensorStatus.Suspended);
+        }
+    }
+
+    public void recordProduction(double value){};
+
+    public void displayOverView(){
+        System.out.println("Number of aquaculture species : " + aquacultureSpecies.size());
+        System.out.println("Feeding program of this aquaculture zone : ");
+        feedProg.displayFeedingProg();
+    }
 
 
 }

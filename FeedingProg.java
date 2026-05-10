@@ -21,8 +21,8 @@ public class FeedingProg{
       return quantity;
   }
   public void displayFeedingProg(){
-      System.out.println("Feed Type: " + feedtype);
-      System.out.println("Quantity per meal: " + quantity);
+      System.out.println("- Feed Type: " + feedtype);
+      System.out.println("- Quantity per meal: " + quantity);
   }
   
   

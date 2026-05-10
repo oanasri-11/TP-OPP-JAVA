@@ -44,15 +44,18 @@ public class Cropszone extends Geographicalzone{
         s.displayReading();
       }
   }
+
   public void addcrop(Crop c){
       crop_fields.add(c);
   }
-  public void displayoverview(){
-    super.displayoverview();
+
+  public void displayOverView(){
     System.out.println("Number of enviromental sensors : " + envSensors.size());
     System.out.println("Number of soil sensors : " + soilSensors.size());
     System.out.println("Number of crop fields : " + crop_fields.size());
   }
+
+  
   public void recordProduction(double yieldAmount){
 
     if (this.record != null) {
@@ -62,6 +65,17 @@ public class Cropszone extends Geographicalzone{
         } else {
             System.out.println("No production record available for zone " + this.name);
         }
+  }
+
+  public void deactivate(){
+    this.status = ZoneStatus.SUSPENDED;
+    for(Sensor s : envSensors){
+      s.setStatus(SensorStatus.Suspended);
+    }
+
+    for(Sensor s : soilSensors){
+      s.setStatus(SensorStatus.Suspended);
+    }
   }
 
 

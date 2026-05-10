@@ -52,6 +52,20 @@ public Livestockzone(String name , double L , double l) {
   public void setFeedingProg(FeedingProg f){
       feedProg = f;
   }
+
+  public void deactivate(){
+    this.status = ZoneStatus.SUSPENDED;
+    for(Sensor s : bioSensors){
+      s.setStatus(SensorStatus.Suspended);
+    }
+
+    for(Sensor s : gpsCollars){
+      s.setStatus(SensorStatus.Suspended);
+    }
+
+  }
+
+    
   
 
 }
