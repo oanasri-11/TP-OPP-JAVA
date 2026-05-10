@@ -1,4 +1,4 @@
-public abstract  class Animal{
+public  class Animal{
 
   static int numberAnimals = 0;
 
