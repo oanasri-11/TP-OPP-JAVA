@@ -1,4 +1,4 @@
-public  class Animal{
+public   class Animal{
 
   static int numberAnimals = 0;
 
@@ -37,6 +37,13 @@ public  class Animal{
     this.healthstatus = status;
     this.weight = weight; 
   }
+  public void displayInfo(){
+    System.out.println("Unique Number: " + uniquenumber);
+    System.out.println("Age: " + age);
+    System.out.println("Weight: " + weight);
+    System.out.println("Health Status: " + healthstatus);
+  }
+
 
 
 
