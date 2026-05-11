@@ -7,7 +7,7 @@ abstract public  class Livestockzone extends Geographicalzone{
 private List<BiometricSensor> bioSensors ;
 private List<GPScollars> gpsCollars ;
 
-private  List<Animal> animals;
+private  List<Animal> animals ;
 private FeedingProg feedProg ;
 
 public Livestockzone(String name , double L , double l) {
@@ -69,8 +69,25 @@ public Livestockzone(String name , double L , double l) {
     System.out.println("Number of animals : " + animals.size());
     System.out.println("Number of biometric sensors : " + bioSensors.size());
     System.out.println("Number of GPScollars  : " + gpsCollars.size());
+    System.out.println("************************");
   }
+public void registerAnimal(int age, double weight, Healthstatus healthstatus){
+    animals.add(new Animal(age, weight, healthstatus));
+    }
+    public void printanimalsInfo(){
+        for(Animal a : animals){
+            a.displayInfo();
+        }
+    }
+    public void displaysensorinfo(){
+        for(BiometricSensor s : bioSensors){
+            s.displaysensorinfo();
+        }
 
+        for(GPScollars s : gpsCollars){
+            s.displaysensorinfo();
+        }
+    }
   
 
 }

@@ -5,5 +5,8 @@ public class Poultry extends Livestockzone{
     public Poultry(String name  , double L , double l ) {
         super(name ,  L ,  l );
     }
+    public void recordProduction(double value){
+        egg_count += (int)value;
+    }
 
 }

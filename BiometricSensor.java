@@ -24,6 +24,7 @@ public class BiometricSensor extends Sensor{
       read = new Readings(activitylevel ,range , zone , this);
       readingsHistory.add(read);
   }
+  
 
 
 }

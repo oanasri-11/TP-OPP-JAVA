@@ -1,7 +1,9 @@
-public abstract  class Geographicalzone {
+import java.util.ArrayList;
+import java.util.List;
+public abstract class Geographicalzone {
   
   static int numZones = 0;
-
+ static private  List<Geographicalzone> zones = new ArrayList<>();
   protected  int code;
   protected  String name;
   protected  ZoneStatus status;
@@ -15,10 +17,12 @@ public abstract  class Geographicalzone {
   public Geographicalzone(String name , double longitude , double latitude) {
     numZones ++ ;
     this.name = name;
+    this.status=ZoneStatus.ACTIVE;
     this.longitude = longitude;
     this.latitude = latitude;
     this.code = numZones;
     this.record = new ProductionRecord();
+    //zones.add(this);
   }
   public void editzone(String name , double L , double l){
     this.name = name;
@@ -29,6 +33,15 @@ public abstract  class Geographicalzone {
   
   public abstract void displayOverView();
   public abstract void recordProduction(double value);
+   
+
+   public String getName(){
+      return name;
+  }
+  public String getStatus(){
+      return status.toString();
+  }
+
 
   public int getCode(){
       return code;
@@ -40,6 +53,9 @@ public abstract  class Geographicalzone {
 
   public double getLatitude(){
     return latitude;
+  }
+  public static List<Geographicalzone> getZones(){
+      return zones;
   }
 
 
