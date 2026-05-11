@@ -18,6 +18,7 @@ public abstract  class Geographicalzone {
     this.longitude = longitude;
     this.latitude = latitude;
     this.code = numZones;
+    this.record = new ProductionRecord();
   }
   public void editzone(String name , double L , double l){
     this.name = name;

@@ -4,6 +4,7 @@ public class ProductionRecord {
     private int egg_count ;
     private double harvestWeight;
     private double corp_yield;
+    
  public void recordMilkYield(double value){
      milk_yield = value;
  }

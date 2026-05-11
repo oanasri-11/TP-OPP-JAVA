@@ -49,7 +49,24 @@ public Aquaculturezone(String name , double L , double l) {
         }
     }
 
-    public void recordProduction(double value){};
+  public double getHarvestWeight(){
+    double result = 0.0 ;
+    for(Animal a : aquacultureSpecies){
+        result += a.getWeight();
+    }
+    return result;
+  }  
+
+  public void recordProduction(double yieldAmount){
+
+    if (this.record != null) {
+            
+            this.record.recordHarvestWeight(getHarvestWeight());
+            System.out.println("Production recorded: " + yieldAmount + " units for zone " + this.name);
+        } else {
+            System.out.println("No production record available for zone " + this.name);
+        }
+  }
 
     public void displayOverView(){
         System.out.println("animal specie of this zone : " + specie.name());
