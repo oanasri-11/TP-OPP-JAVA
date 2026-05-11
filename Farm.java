@@ -1,3 +1,7 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Farm {
   private List<Geographicalzone> zones;
   public Farm() {

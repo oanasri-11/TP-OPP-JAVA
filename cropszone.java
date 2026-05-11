@@ -55,7 +55,7 @@ public class Cropszone extends Geographicalzone{
     System.out.println("Number of crop fields : " + crop_fields.size());
   }
 
-  
+
   public void recordProduction(double yieldAmount){
 
     if (this.record != null) {
@@ -77,6 +77,12 @@ public class Cropszone extends Geographicalzone{
       s.setStatus(SensorStatus.Suspended);
     }
   }
+
+  public void generatecropstatus(){
+  for (Crop c:crop_fields){
+    c.displaystatus();
+  }
+}
 
 
 

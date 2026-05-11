@@ -1,15 +1,14 @@
 
-import java.time.LocalDate;
 
 public class Crop {
 
   private Cropsfamilies family;
-  private LocalDate Plantingdate;
-  private LocalDate Harvestingdate;
+  private String Plantingdate;
+  private String Harvestingdate;
   private GrowthStage growthStage;
   private SoilRequirments soilReq;
   
-  public Crop(LocalDate Plantingdate, LocalDate Harvestingdate){
+  public Crop(String Plantingdate, String Harvestingdate){
     this.Plantingdate=Plantingdate;
     this.Harvestingdate=Harvestingdate;
 
@@ -33,7 +32,7 @@ public void setFamily(Cropsfamilies family){
 public void setSoilReq(SoilRequirments soilReq){
   this.soilReq = soilReq;
 }
-public void setPlantingdate(LocalDate Plantingdate){
+public void setPlantingdate(String Plantingdate){
   this.Plantingdate = Plantingdate;
 }
 
@@ -45,9 +44,23 @@ public void setPlantingdate(LocalDate Plantingdate){
 
 
 
-public void updategrowthstage(LocalDate cdate){
-  this.growthStage = GrowthStage.getGrowthStage(Plantingdate, Harvestingdate, cdate);
+public void updategrowthstage(){
+  switch(growthStage){
+    case SOWING :
+      growthStage = GrowthStage.GERMINATION ;
+      break;
+    case GERMINATION :
+      growthStage = GrowthStage.GROWTH ;
+      break;
+    case GROWTH :
+      growthStage = GrowthStage.MATURITY ;
+      break;
+    case MATURITY :
+      growthStage = GrowthStage.HARVEST ;
+      break;
+  }
 }
+
 public void displaystatus(){
   System.out.println("Crop family : " + family);
   System.out.println("Planting date : " + Plantingdate);
@@ -57,10 +70,5 @@ public void displaystatus(){
 }
 
 
-public void generatecropstatus(){
-  for (Crop c:crop_fields){
-    c.displaystatus();
-  }
-}
 
 }
