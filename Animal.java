@@ -18,11 +18,7 @@ public   class Animal{
     this.healthstatus = healthstatus;
     
   }
-  public void registerAnimal(int age, double weight, Healthstatus healthstatus){
-    this.age = age;
-    this.weight = weight;
-    this.healthstatus = healthstatus;
-  }
+  
   public int getUniquenumber(){
       return uniquenumber;
   }

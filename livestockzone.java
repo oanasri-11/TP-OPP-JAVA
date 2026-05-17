@@ -70,10 +70,27 @@ public Livestockzone(String name , double L , double l) {
     System.out.println("Feeding program of this aquaculture zone : ");
     feedProg.displayFeedingProg();
 
+    System.out.println("************************");
   }
+public void registerAnimal(int age, double weight, Healthstatus healthstatus){
+    animals.add(new Animal(age, weight, healthstatus));
+    }
+    public void printanimalsInfo(){
+        for(Animal a : animals){
+            a.displayInfo();
+        }
+    }
+    public void displaysensorinfo(){
+        for(BiometricSensor s : bioSensors){
+            s.displaysensorinfo();
+        }
 
-  abstract  void addAnimal(Animal a) throws WrongAnimalSpecieException;
-
-  
+        
+        for(GPScollars s : gpsCollars){
+          s.displaysensorinfo();
+        }
+      }
+      
+      abstract  void addAnimal(Animal a) throws WrongAnimalSpecieException;
 
 }
