@@ -6,6 +6,8 @@ public   class Animal{
   private int age;
   private double weight;
   private Healthstatus healthstatus;
+  private AnimalSpecie specie;
+  private Geographicalzone zone;
 
 
   public Animal(int age, double weight, Healthstatus healthstatus) {// we can say the are the same ,we can reomove one of them 
@@ -14,6 +16,7 @@ public   class Animal{
     this.age = age;
     this.weight = weight;
     this.healthstatus = healthstatus;
+    
   }
   public void registerAnimal(int age, double weight, Healthstatus healthstatus){
     this.age = age;
@@ -33,6 +36,10 @@ public   class Animal{
     return healthstatus;
   }
 
+  public AnimalSpecie getSpecie(){
+      return specie;
+  }
+
   public void loghealsthevent(Healthstatus status ,double weight){
     this.healthstatus = status;
     this.weight = weight; 
@@ -44,7 +51,13 @@ public   class Animal{
     System.out.println("Health Status: " + healthstatus);
   }
 
+  public void setZone(Geographicalzone zone){
+    this.zone = zone;
+  }
 
+  public Geographicalzone getZone(){
+    return zone;
+  }
 
 
   

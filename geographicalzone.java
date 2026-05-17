@@ -25,6 +25,17 @@ public abstract  class Geographicalzone {
     longitude = L;
     latitude = l;
   }
+
+  public void editzone(String name ){
+    this.name = name;
+  }
+
+  public void editzone( double L , double l){
+    longitude = L;
+    latitude = l;
+  }
+
+
   abstract  void deactivate();
   
   public abstract void displayOverView();

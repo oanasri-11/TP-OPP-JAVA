@@ -35,7 +35,9 @@ public Aquaculturezone(String name , double L , double l) {
         s.displayReading();
       }
   }
-  public void addAnimal(Animal a){
+  public void addAnimal(Animal a) throws WrongAnimalSpecieException{
+      if( a.getSpecie() != specie) throw new WrongAnimalSpecieException();  
+      a.setZone(this);
       aquacultureSpecies.add(a);
   }
     public void setFeedingProg(FeedingProg f){

@@ -4,10 +4,10 @@ import java.util.List;
 
 abstract public  class Livestockzone extends Geographicalzone{
 
-private List<BiometricSensor> bioSensors ;
-private List<GPScollars> gpsCollars ;
+protected  List<BiometricSensor> bioSensors ;
+protected  List<GPScollars> gpsCollars ;
 
-private  List<Animal> animals;
+protected  List<Animal> animals;
 private FeedingProg feedProg ;
 
 public Livestockzone(String name , double L , double l) {
@@ -46,9 +46,7 @@ public Livestockzone(String name , double L , double l) {
 
 
   }
-  public void addAnimal(Animal a){
-      animals.add(a);
-  }
+
   public void setFeedingProg(FeedingProg f){
       feedProg = f;
   }
@@ -73,6 +71,8 @@ public Livestockzone(String name , double L , double l) {
     feedProg.displayFeedingProg();
 
   }
+
+  abstract  void addAnimal(Animal a) throws WrongAnimalSpecieException;
 
   
 

@@ -2,6 +2,7 @@ public class GPScollars extends Sensor{
 
   private double latitude;
   private double longitude;
+  private Animal animal;
   
   public GPScollars(Geographicalzone zone , double min , double max){
     super(zone, min , max);
@@ -17,5 +18,14 @@ public class GPScollars extends Sensor{
         ReadingPosition read = new ReadingPosition(longitude , latitude , new Thershold(0.0 , zone.getLongitude()) , new Thershold(0.0 , zone.getLatitude()) , zone , this);
         readingsHistory.add(read);
     }
+
+    public Animal getAnimal(){
+      return animal;
+    }
+
+    public void setAnimal(Animal a){
+      this.animal = a;
+    }
+  
 
 }

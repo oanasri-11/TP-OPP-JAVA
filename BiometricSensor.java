@@ -5,6 +5,7 @@ public class BiometricSensor extends Sensor{
 
     private double bodytemperature;
     private double activitylevel;  // in steps per minute
+    private Animal animal;
 
 
     public BiometricSensor( Geographicalzone zone , double min , double max){
@@ -23,6 +24,14 @@ public class BiometricSensor extends Sensor{
       readingsHistory.add(read);
       read = new Readings(activitylevel ,range , zone , this);
       readingsHistory.add(read);
+  }
+
+  public Animal getAnimal(){
+    return animal;
+  }
+
+  public void setAnimal(Animal a){
+    this.animal = a;
   }
 
 
