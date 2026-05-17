@@ -15,9 +15,9 @@ public class WaterSensor extends Sensor{
     }
 
     public void sendReading(){
-        Readings read = new Readings(temperature ,range , zone);
+        Readings read = new Readings(temperature ,range , zone , this);
         readingsHistory.add(read);
-        read = new Readings(dissolvedOxygen ,range , zone);
+        read = new Readings(dissolvedOxygen ,range , zone , this);
         readingsHistory.add(read);
     }
 

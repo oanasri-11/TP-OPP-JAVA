@@ -6,4 +6,6 @@ public class Poultry extends Livestockzone{
         super(name ,  L ,  l );
     }
 
+    public void recordProduction(double d){}
+
 }

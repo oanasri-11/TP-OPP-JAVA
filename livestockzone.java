@@ -69,6 +69,9 @@ public Livestockzone(String name , double L , double l) {
     System.out.println("Number of animals : " + animals.size());
     System.out.println("Number of biometric sensors : " + bioSensors.size());
     System.out.println("Number of GPScollars  : " + gpsCollars.size());
+    System.out.println("Feeding program of this aquaculture zone : ");
+    feedProg.displayFeedingProg();
+
   }
 
   

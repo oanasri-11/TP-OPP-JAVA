@@ -10,7 +10,7 @@ public class BiometricSensor extends Sensor{
     public BiometricSensor( Geographicalzone zone , double min , double max){
         super(zone , min , max);
     }
-
+    
 
     public void displayReading(){
         System.out.println("Biometric Sensor #" + code +" of Livestock zone #"+ zone.getCode()+" :" );

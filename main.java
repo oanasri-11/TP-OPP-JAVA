@@ -20,7 +20,8 @@ public class main {
         zones[4] = new Aquaculturezone("fishs zone" , 46 , 96.7);
 
         ((Cropszone) zones[0]).addcrop(new Crop("12-09-2025" , "06-07-2026"));
-
+        Cropszone zone1 = (Cropszone) zones[0];
+        zone1.displayOverView();
 
 
     }
