@@ -11,6 +11,9 @@ public class Crop {
   public Crop(String Plantingdate, String Harvestingdate){
     this.Plantingdate=Plantingdate;
     this.Harvestingdate=Harvestingdate;
+    this.growthStage = GrowthStage.SOWING;
+    this.soilReq = soilReq;
+
 
   
   }
@@ -60,7 +63,7 @@ public void updategrowthstage(){
       break;
   }
 }
-
+// display the current status of the crop
 public void displaystatus(){
   System.out.println("Crop family : " + family);
   System.out.println("Planting date : " + Plantingdate);
@@ -68,6 +71,8 @@ public void displaystatus(){
   System.out.println("Current growth stage : " + growthStage);
   System.out.println("Soil requirements : " + soilReq);
 }
+
+
 
 
 

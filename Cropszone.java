@@ -44,6 +44,7 @@ public class Cropszone extends Geographicalzone{
         s.displayReading();
       }
   }
+// register a crop field in the zone
 
   public void addcrop(Crop c){
       crop_fields.add(c);

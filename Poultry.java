@@ -9,7 +9,7 @@ public class Poultry extends Livestockzone{
         egg_count += (int)value;
     }
 
-    public void recordProduction(double d){}
+  //  public void recordProduction(double d){}
 
     public void addAnimal(Animal a) throws WrongAnimalSpecieException{
 
