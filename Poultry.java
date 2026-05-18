@@ -6,10 +6,9 @@ public class Poultry extends Livestockzone{
         super(name ,  L ,  l );
     }
     public void recordProduction(double value){
-        egg_count += (int)value;
+        record.recordEggCount(egg_count);
     }
 
-    public void recordProduction(double d){}
 
     public void addAnimal(Animal a) throws WrongAnimalSpecieException{
 

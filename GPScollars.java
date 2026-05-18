@@ -6,6 +6,7 @@ public class GPScollars extends Sensor{
   
   public GPScollars(Geographicalzone zone , double min , double max){
     super(zone, min , max);
+    type = SensorType.gpsCollars;
   }
 
     public void displayReading(){

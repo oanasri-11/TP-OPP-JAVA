@@ -6,6 +6,7 @@ public class SoilSensor extends Sensor {
 
     public SoilSensor(Geographicalzone zone , double min , double max){
         super(zone , min , max);
+        type = SensorType.soilSensor;
     }
 
   public double getPH() {

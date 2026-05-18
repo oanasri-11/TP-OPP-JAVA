@@ -58,16 +58,17 @@ public class Cropszone extends Geographicalzone{
     System.out.println("Number of crop fields : " + crop_fields.size());
   }
 
+  public double getTotalCropYield(){
+    double result = 0.0 ;
+    for(Crop crop : crop_fields){
+      result += crop.getCropYield();
+    }
+    return result;
+  }
+
 
   public void recordProduction(double yieldAmount){
-
-    if (this.record != null) {
-            
-            this.record.recordCropYield(yieldAmount);
-            System.out.println("Production recorded: " + yieldAmount + " units for zone " + this.name);
-        } else {
-            System.out.println("No production record available for zone " + this.name);
-        }
+    record.recordCropYield(getTotalCropYield());
   }
 
   public void deactivate(){

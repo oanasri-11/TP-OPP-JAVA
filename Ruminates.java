@@ -7,7 +7,7 @@ public Ruminates(String name , double L , double l) {
   }
 
   public void recordProduction(double value){
-
+    record.recordMilkYield(milk_yield);
   }
 
   public void addAnimal(Animal a) throws WrongAnimalSpecieException{

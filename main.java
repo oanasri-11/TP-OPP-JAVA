@@ -1,9 +1,8 @@
 
-import java.util.*;
 public class main {
 
     public static void main(String[] args){
-
+        /*
         Animal animal1 = new Animal(5, 10.5, Healthstatus.HEALTHY) ;
         animal1.displayInfo();
         Animal animal2 = new Animal(6, 15.5, Healthstatus.HEALTHY) ;
@@ -13,23 +12,24 @@ public class main {
 
         Livestockzone zone1 = new Poultry("Livestock Zone 1", 50.0, 60.0);
         zone1.registerAnimal(5, 10.5, Healthstatus.HEALTHY);
-       // zone1.displayOverView();
+        zone1.displayOverView();
         
         ManageZones.AddZone(zone1);
+        */
 
-        System.out.println("name of the zone : " + zone1.getName() + " , code of the zone : " + zone1.getCode() + " , status of the zone : " + zone1.getStatus() + " , longitude : " + zone1.getLongitude() + " , latitude : " + zone1.getLatitude());
-  
-        
-           ManageSensors.addSensor(SensorType.biometricSensor, zone1 ,30.0, 40.0);
-           zone1.displaysensorinfo();
-           
+        Cropszone zone2 = new Cropszone("tomate zone" , 16.0 , 18.5);
+        Cropszone zone3 = new Cropszone("potato zone" , 22.0 , 16.5);
 
-           List<Crop> crops = new ArrayList<Crop>();
-           crops.add(new Crop("12/03/2003","14/06/2003"));
+        ManageZones.AddZone(zone2);
+        ManageZones.AddZone(zone3);
 
+
+        ManageSensors.addSensor(SensorType.enviroSensor, zone2, 12, 16);
+        ManageSensors.addSensor(SensorType.soilSensor, zone2, 11, 13.25);
+        ManageSensors.addSensor(SensorType.enviroSensor, zone3, 16, 17.5);
+        ManageSensors.addSensor(SensorType.soilSensor, zone3, 10, 16);
 
             
-
 
        // Geographicalzone[] zones = new Geographicalzone[5];
         /*zones[0] = new Cropszone("potato zone" , 56.5 , 42.75);

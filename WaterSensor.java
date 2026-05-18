@@ -5,6 +5,7 @@ public class WaterSensor extends Sensor{
 
     public WaterSensor(Geographicalzone zone , double min , double max){
         super(zone, min , max);
+        type = SensorType.waterSensor;
     }
 
     public void displayReading(){

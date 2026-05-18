@@ -6,6 +6,7 @@ public class EnviroSensor extends Sensor {
   
     public EnviroSensor( Geographicalzone zone  , double min , double max){
         super(zone , min , max);
+        type = SensorType.enviroSensor;
     }
 
     public void displayReading(){

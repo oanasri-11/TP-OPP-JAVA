@@ -12,6 +12,7 @@ public abstract class Sensor{
   protected Geographicalzone zone;
   protected Thershold range ;
   protected List<Readings> readingsHistory;
+  protected SensorType type;
 
   public Sensor(  Geographicalzone zone , double min , double max){
     numSensors ++;

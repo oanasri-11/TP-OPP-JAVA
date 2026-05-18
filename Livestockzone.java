@@ -18,6 +18,8 @@ public Livestockzone(String name , double L , double l) {
   }
 
   public void addSensor(SensorType type , double min , double max) throws WrongTypeSensorException{
+    System.out.println("the sensors of this zone will be created automatically when you add animal to this zone. ");
+    /*
         switch(type){
             case biometricSensor :
                 bioSensors.add(new BiometricSensor(this , min , max));
@@ -31,6 +33,7 @@ public Livestockzone(String name , double L , double l) {
                 throw new WrongTypeSensorException();
                 
         }
+                */
     }
 
 

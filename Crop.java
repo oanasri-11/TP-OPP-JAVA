@@ -7,6 +7,7 @@ public class Crop {
   private String Harvestingdate;
   private GrowthStage growthStage;
   private SoilRequirments soilReq;
+  private double cropYield;
   
   public Crop(String Plantingdate, String Harvestingdate){
     this.Plantingdate=Plantingdate;
@@ -14,7 +15,12 @@ public class Crop {
 
   
   }
-  public String getGrowthStage(){
+
+public double getCropYield(){
+  return cropYield;
+}
+
+public String getGrowthStage(){
   return growthStage.toString();
 
 }
