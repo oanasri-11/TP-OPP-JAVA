@@ -25,6 +25,7 @@ public class GPScollars extends Sensor{
 
     public void setAnimal(Animal a){
       this.animal = a;
+      a.setGPScollars(this);
     }
   
 

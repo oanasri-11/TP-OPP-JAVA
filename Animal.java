@@ -8,6 +8,8 @@ public   class Animal{
   private Healthstatus healthstatus;
   private AnimalSpecie specie;
   private Geographicalzone zone;
+  private BiometricSensor bioSensor;
+  private GPScollars gps;
 
 
   public Animal(int age, double weight, Healthstatus healthstatus) {// we can say the are the same ,we can reomove one of them 
@@ -55,8 +57,14 @@ public   class Animal{
     return zone;
   }
 
+  public void setBiometicSensor(BiometricSensor s){
+     bioSensor = s;
+  }
 
-  
+  public void setGPScollars(GPScollars s){
+    gps = s;
+ }
+
 
 
 

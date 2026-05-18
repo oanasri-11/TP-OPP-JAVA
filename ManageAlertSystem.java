@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ManageAlertSystem {
@@ -13,8 +14,12 @@ public class ManageAlertSystem {
         }
     }
 
-    static public void dismissAlert(Alert a , boolean dismiss){
-        if(dismiss) Alert.getAlertsHistory().remove(a);
+    static public void acknowledgeAlert(Alert a ){
+        a.acknowledge();
+    }
+
+    static public void dismissAlert(Alert a ){
+        a.dismiss();
     }
 
     static public  List<Alert> browseAlertHistory(Geographicalzone zone){
@@ -54,6 +59,15 @@ public class ManageAlertSystem {
     }
 
 
-    // time period ????
+    static public List<Alert> browseAlertHistory(Date from , Date to){
+        List result = new ArrayList<>();
 
+        for(Alert alert : Alert.getAlertsHistory() ){
+            if(alert.getDate().compareTo(from) >= 0 && alert.getDate().compareTo(to) <= 0) {
+                result.add(alert);
+            }
+        }
+
+        return result;
+    }
 }

@@ -26,7 +26,7 @@ public class ManageSensors{
     }
 
 
-    static public List<Readings> browseReadingsByDateRange( Sensor s , Date from , Date to){
+    static public List<Readings> browseReadings( Sensor s , Date from , Date to){
         List<Readings> results = new ArrayList<>() ;
         for(Readings read : s.getReadingsHistory()){
             Date date = read.getDate() ;

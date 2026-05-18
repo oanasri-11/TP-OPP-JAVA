@@ -71,12 +71,11 @@ public Aquaculturezone(String name , double L , double l) {
   }
 
     public void displayOverView(){
+        System.out.println("Zone #"+ getCode() );
+        System.out.println("Status : " + status.toString());
         System.out.println("animal specie of this zone : " + specie.name());
         System.out.println("Number of aquaculture species : " + aquacultureSpecies.size());
         System.out.println("Number of water sensors : " + waterSensors.size());
-        System.out.println("Feeding program of this aquaculture zone : ");
-        feedProg.displayFeedingProg();
     }
-
 
 }

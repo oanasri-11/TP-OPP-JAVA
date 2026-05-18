@@ -20,6 +20,7 @@ public class Cropszone extends Geographicalzone{
     }
 
     public void addSensor(SensorType type , double min , double max) throws WrongTypeSensorException{
+      
         switch(type){
             case enviroSensor :
                 envSensors.add(new EnviroSensor(this , min , max));
@@ -45,11 +46,13 @@ public class Cropszone extends Geographicalzone{
       }
   }
 
-  public void addcrop(Crop c){
+  public void addCrop(Crop c){
       crop_fields.add(c);
   }
 
   public void displayOverView(){
+    System.out.println("Zone #"+ getCode() );
+    System.out.println("Status : " + status.toString());
     System.out.println("Number of enviromental sensors : " + envSensors.size());
     System.out.println("Number of soil sensors : " + soilSensors.size());
     System.out.println("Number of crop fields : " + crop_fields.size());

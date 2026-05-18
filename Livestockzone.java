@@ -64,13 +64,12 @@ public Livestockzone(String name , double L , double l) {
   }
 
   public void displayOverView(){
+    System.out.println("Zone #"+ getCode() );
+    System.out.println("Status : " + status.toString());
     System.out.println("Number of animals : " + animals.size());
     System.out.println("Number of biometric sensors : " + bioSensors.size());
     System.out.println("Number of GPScollars  : " + gpsCollars.size());
-    System.out.println("Feeding program of this aquaculture zone : ");
-    feedProg.displayFeedingProg();
-
-    System.out.println("************************");
+    System.out.println();
   }
 public void registerAnimal(int age, double weight, Healthstatus healthstatus){
     animals.add(new Animal(age, weight, healthstatus));

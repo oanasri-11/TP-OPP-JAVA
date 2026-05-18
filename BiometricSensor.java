@@ -33,6 +33,7 @@ public class BiometricSensor extends Sensor{
 
   public void setAnimal(Animal a){
     this.animal = a;
+    a.setBiometicSensor(this);
   }
 
 

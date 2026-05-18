@@ -1,9 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
 public abstract class Geographicalzone {
   
   static int numZones = 0;
- static private  List<Geographicalzone> zones = new ArrayList<>();
   protected  int code;
   protected  String name;
   protected  ZoneStatus status;
@@ -30,17 +27,16 @@ public abstract class Geographicalzone {
     latitude = l;
   }
 
-  public void editzone(String name ){
+  public void edit(String name ){
     this.name = name;
   }
 
-  public void editzone( double L , double l){
+  public void edit( double L , double l){
     longitude = L;
     latitude = l;
   }
 
 
-  abstract  void deactivate();
   
   public abstract void displayOverView();
   public abstract void recordProduction(double value);
@@ -49,6 +45,11 @@ public abstract class Geographicalzone {
    public String getName(){
       return name;
   }
+
+  public void setName(String name){
+      this.name = name;
+  }
+
   public String getStatus(){
       return status.toString();
   }
@@ -65,13 +66,13 @@ public abstract class Geographicalzone {
   public double getLatitude(){
     return latitude;
   }
-  public static List<Geographicalzone> getZones(){
-      return zones;
-  }
+
+
 
 
   abstract void addSensor(SensorType type , double min , double max ) throws WrongTypeSensorException;
   abstract void displayReadings();
+  abstract void deactivate();
 
   
 }

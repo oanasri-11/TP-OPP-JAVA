@@ -12,6 +12,8 @@ public class Alert implements Comparable<Alert>{
     private Readings read ;
     private Date date;
     private SeverityLevel lvl ;
+    private boolean active = true;
+    private boolean dismissed = false;
   
     public Alert(SeverityLevel lvl , Readings read){
         numAlerts ++;
@@ -53,6 +55,10 @@ public class Alert implements Comparable<Alert>{
         return read;
     }
 
+    public Date getDate(){
+        return date;
+    }
+
     public void display(){
         String level ;
         if(lvl == SeverityLevel.warning) level = "waring";
@@ -63,5 +69,15 @@ public class Alert implements Comparable<Alert>{
         System.out.println("\tReading reason : Reading #"+ read.getCode() +":");
         System.out.println("\t\texceeding value : " + read.getReadingInString());
     }
+
+    public void acknowledge(){
+        active = false ;
+    }
+
+    public void dismiss(){
+        active = false;
+        dismissed = true;
+    }
+
 
 }
