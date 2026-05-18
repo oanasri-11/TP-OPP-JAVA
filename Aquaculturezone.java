@@ -30,6 +30,24 @@ public Aquaculturezone(String name , double L , double l) {
         }
     }
 
+    public void addSensor(SensorType type , Sensor s) throws WrongTypeSensorException{
+        switch(s.getType()){
+            case waterSensor :
+                waterSensors.add((WaterSensor) s);
+                break;
+            
+            case waterSensor :
+                waterSensors.add((WaterSensor) s);
+                break;
+            
+            default :
+                throw new WrongTypeSensorException();
+                
+        }
+    }
+
+
+
   public void displayReadings(){
       for(WaterSensor s : waterSensors){
         s.displayReading();

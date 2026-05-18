@@ -36,6 +36,10 @@ public Livestockzone(String name , double L , double l) {
                 */
     }
 
+    public void addSensor(SensorType type , Sensor s) throws WrongTypeSensorException{
+      System.out.println("the sensors of this zone will be created automatically when you add animal to this zone. ");
+    }
+
 
   public void displayReadings(){
 

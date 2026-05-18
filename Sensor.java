@@ -26,6 +26,10 @@ public abstract class Sensor{
   public int getCode() {
     return code;
   }
+
+  public SensorType getType(){
+    return type;
+  }
   
   public Geographicalzone getZone() {
     return zone;

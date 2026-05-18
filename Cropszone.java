@@ -36,6 +36,23 @@ public class Cropszone extends Geographicalzone{
         }
     }
 
+    public void addSensor(SensorType type , Sensor s) throws WrongTypeSensorException{
+      
+      switch(s.getType()){
+          case enviroSensor :
+              envSensors.add((EnviroSensor) s);
+              break;
+          
+          case soilSensor :
+              soilSensors.add((SoilSensor) s);
+              break;
+          
+          default :
+              throw new WrongTypeSensorException();
+              
+      }
+  }
+
   public void displayReadings(){
       for(EnviroSensor s : envSensors){
         s.displayReading();
@@ -82,7 +99,7 @@ public class Cropszone extends Geographicalzone{
     }
   }
 
-  public void generatecropstatus(){
+  public void generateCropStatus(){
   for (Crop c:crop_fields){
     c.displaystatus();
   }
