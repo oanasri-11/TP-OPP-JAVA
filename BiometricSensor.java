@@ -3,13 +3,14 @@
 public class BiometricSensor extends Sensor{
 
 
-    private double bodytemperature;
-    private double activitylevel;  // in steps per minute
+    private double bodytemperature = 37.0;
+    private double activitylevel = 12;  // in steps per minute
     private Animal animal;
 
 
     public BiometricSensor( Geographicalzone zone , double min , double max){
         super(zone , min , max);
+        type = SensorType.biometricSensor;
     }
     
 

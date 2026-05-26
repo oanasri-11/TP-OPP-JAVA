@@ -3,7 +3,9 @@ import java.util.List;
 
 
 public class ManageZones{
+
 static private  List<Geographicalzone> zones = new ArrayList<>();
+
 public static List<Geographicalzone> getZones(){
       return zones;
   }
@@ -12,6 +14,29 @@ public static List<Geographicalzone> getZones(){
         zones.add(zone);
 
     }
+
+    static public void AddZone(ZoneType type , String name , double L , double l){
+        
+        switch(type){
+            case aquaculturezone :
+                zones.add(new Aquaculturezone(name , L , l));
+            break;
+
+            case cropszone :
+                zones.add(new Cropszone(name , L , l));
+            break;
+
+            case Poultryzone :
+                zones.add(new Poultryzone(name , L , l));
+            break;
+
+            case ruminateszone :
+                zones.add(new Ruminateszone(name , L , l));
+            break;
+        }
+
+    }
+
 
 
     static public void editZone(Geographicalzone zone , String name){

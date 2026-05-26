@@ -9,10 +9,11 @@ public class Crop {
   private SoilRequirments soilReq;
   private double cropYield;
   
-  public Crop(String Plantingdate, String Harvestingdate){
+  public Crop(Cropsfamilies family , String Plantingdate, String Harvestingdate , SoilRequirments req){
+    this.family = family;
     this.Plantingdate=Plantingdate;
     this.Harvestingdate=Harvestingdate;
-
+    this.soilReq = req;
   
   }
 
@@ -43,13 +44,6 @@ public void setPlantingdate(String Plantingdate){
 }
 
 
-
-
-
-
-
-
-
 public void updategrowthstage(){
   switch(growthStage){
     case SOWING :
@@ -68,13 +62,15 @@ public void updategrowthstage(){
 }
 
 public void displaystatus(){
-  System.out.println("Crop family : " + family);
+  System.out.println("Crop family : " + family.toString());
   System.out.println("Planting date : " + Plantingdate);
   System.out.println("Harvesting date : " + Harvestingdate);
-  System.out.println("Current growth stage : " + growthStage);
+  System.out.println("Current growth stage : " + growthStage.toString());
   System.out.println("Soil requirements : " + soilReq);
 }
 
-
+public void displayCurrentGrowthStage(){
+  System.out.println("Current growth stage : " + growthStage.toString());
+}
 
 }

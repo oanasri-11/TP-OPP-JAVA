@@ -1,7 +1,7 @@
 public class WaterSensor extends Sensor{
   
-    private double temperature;
-    private double dissolvedOxygen;
+    private double temperature = 36.8;
+    private double dissolvedOxygen = 12.6;
 
     public WaterSensor(Geographicalzone zone , double min , double max){
         super(zone, min , max);

@@ -17,6 +17,15 @@ public class ManageSensors{
         }
     }
 
+    static public void addSensor(SensorType type , Sensor s){
+        try{
+            s.getZone().addSensor(type, s);
+        }
+        catch(WrongTypeSensorException e){
+            System.out.println("The type of this Sensor is not special for given zone");
+        }
+    }
+
     static public void displayDashboardOfZone(Geographicalzone zone){
         zone.displayReadings();
     }
@@ -35,6 +44,8 @@ public class ManageSensors{
 
         return results ;
     }
+
+    
 
     static public void changeStatusOfSensor(Sensor s , SensorStatus status){
         s.setStatus(status);

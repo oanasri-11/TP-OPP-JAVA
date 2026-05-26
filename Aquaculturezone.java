@@ -15,6 +15,7 @@ public Aquaculturezone(String name , double L , double l) {
     super(name , L , l);
     waterSensors = new ArrayList<>();
     aquacultureSpecies = new ArrayList<>();
+    type = ZoneType.aquaculturezone;
   }
 
 
@@ -36,9 +37,7 @@ public Aquaculturezone(String name , double L , double l) {
                 waterSensors.add((WaterSensor) s);
                 break;
             
-            case waterSensor :
-                waterSensors.add((WaterSensor) s);
-                break;
+            
             
             default :
                 throw new WrongTypeSensorException();
@@ -79,13 +78,11 @@ public Aquaculturezone(String name , double L , double l) {
 
   public void recordProduction(double yieldAmount){
 
-    if (this.record != null) {
             
             this.record.recordHarvestWeight(getHarvestWeight());
             System.out.println("Production recorded: " + yieldAmount + " units for zone " + this.name);
-        } else {
-            System.out.println("No production record available for zone " + this.name);
-        }
+
+            record.recordHarvestWeight(getHarvestWeight());
   }
 
     public void displayOverView(){

@@ -5,6 +5,7 @@ import java.util.TreeSet ;
 public class Alert implements Comparable<Alert>{
     
     static private SortedSet<Alert> alertsHistory = new TreeSet<>();
+    static private SortedSet<Alert> ActivedAlerts = new TreeSet<>();
     
     static private int numAlerts = 0;
 
@@ -12,7 +13,6 @@ public class Alert implements Comparable<Alert>{
     private Readings read ;
     private Date date;
     private SeverityLevel lvl ;
-    private boolean active = true;
     private boolean dismissed = false;
   
     public Alert(SeverityLevel lvl , Readings read){
@@ -21,6 +21,7 @@ public class Alert implements Comparable<Alert>{
         this.lvl = lvl;
         this.read = read;
         this.date = read.getDate();
+        System.out.println("alert is active");
     }
 
     public SeverityLevel getSeverityLevel(){
@@ -28,7 +29,9 @@ public class Alert implements Comparable<Alert>{
     }
 
     static public void generateAlert(Readings read){
-        alertsHistory.add(new Alert(SeverityLevel.warning , read));
+        Alert alert = new Alert(SeverityLevel.warning , read);
+        alertsHistory.add(alert);
+        ActivedAlerts.add(alert);
     }
 
     public int compareTo(Alert a){
@@ -51,6 +54,11 @@ public class Alert implements Comparable<Alert>{
         return alertsHistory;
     }
 
+    static  public  SortedSet<Alert> getActivedAlerts(){
+        return ActivedAlerts;
+    }
+
+
     public Readings getReading(){
         return read;
     }
@@ -60,22 +68,19 @@ public class Alert implements Comparable<Alert>{
     }
 
     public void display(){
-        String level ;
-        if(lvl == SeverityLevel.warning) level = "waring";
-        else level = "critical";
 
         System.out.println("Alert #" + code + " :");
-        System.out.println("\tSeverity Level : "+ level +" | Date : "+ date +" | ");
+        System.out.println("\tSeverity Level : "+ lvl.toString() +" | Date : "+ date +" | ");
         System.out.println("\tReading reason : Reading #"+ read.getCode() +":");
         System.out.println("\t\texceeding value : " + read.getReadingInString());
     }
 
     public void acknowledge(){
-        active = false ;
+        ActivedAlerts.remove(this) ;
     }
 
     public void dismiss(){
-        active = false;
+        ActivedAlerts.remove(this) ;
         dismissed = true;
     }
 

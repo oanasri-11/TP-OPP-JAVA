@@ -1,9 +1,10 @@
-public class Ruminates extends Livestockzone{
+public class Ruminateszone extends Livestockzone{
 
 private double milk_yield;
 
-public Ruminates(String name , double L , double l) {
+public Ruminateszone(String name , double L , double l) {
     super(name , L , l);
+    type = ZoneType.ruminateszone;
   }
 
   public void recordProduction(double value){

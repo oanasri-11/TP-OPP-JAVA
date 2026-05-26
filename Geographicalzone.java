@@ -1,6 +1,8 @@
 public abstract class Geographicalzone {
   
   static int numZones = 0;
+
+  protected ZoneType type ;
   protected  int code;
   protected  String name;
   protected  ZoneStatus status;

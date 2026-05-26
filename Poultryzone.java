@@ -1,10 +1,12 @@
-public class Poultry extends Livestockzone{
+public class Poultryzone extends Livestockzone{
 
     private int egg_count = 0;
 
-    public Poultry(String name  , double L , double l ) {
+    public Poultryzone(String name  , double L , double l ) {
         super(name ,  L ,  l );
+        type = ZoneType.Poultryzone;
     }
+
     public void recordProduction(double value){
         record.recordEggCount(egg_count);
     }

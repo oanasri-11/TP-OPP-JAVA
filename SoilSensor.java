@@ -1,8 +1,8 @@
 public class SoilSensor extends Sensor {
   
-  private double PH;
-  private int moisturelevel;
-  private double nitrogencontent;
+  private double PH = 5.0;
+  private int moisturelevel = 6;
+  private double nitrogencontent = 23.5;
 
     public SoilSensor(Geographicalzone zone , double min , double max){
         super(zone , min , max);

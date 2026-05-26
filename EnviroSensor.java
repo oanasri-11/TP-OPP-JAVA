@@ -1,8 +1,8 @@
 public class EnviroSensor extends Sensor {
 
-    private double temperature;
-    private double humidity;
-    private double rainfall;
+    private double temperature = 37.2;
+    private double humidity = 5.0;
+    private double rainfall = 23.0;
   
     public EnviroSensor( Geographicalzone zone  , double min , double max){
         super(zone , min , max);

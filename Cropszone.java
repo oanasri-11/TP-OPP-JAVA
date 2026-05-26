@@ -17,7 +17,8 @@ public class Cropszone extends Geographicalzone{
         crop_fields = new ArrayList<>();
         envSensors = new ArrayList<>();
         soilSensors = new ArrayList<>();
-    }
+        type = ZoneType.cropszone;
+  }
 
     public void addSensor(SensorType type , double min , double max) throws WrongTypeSensorException{
       

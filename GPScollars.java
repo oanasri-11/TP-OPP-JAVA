@@ -1,7 +1,7 @@
 public class GPScollars extends Sensor{
 
-  private double latitude;
-  private double longitude;
+  private double latitude = 12.0;
+  private double longitude = 13.2;
   private Animal animal;
   
   public GPScollars(Geographicalzone zone , double min , double max){

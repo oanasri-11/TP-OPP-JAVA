@@ -29,7 +29,17 @@ public class main {
         ManageSensors.addSensor(SensorType.enviroSensor, zone3, 16, 17.5);
         ManageSensors.addSensor(SensorType.soilSensor, zone3, 10, 16);
 
-            
+        Aquaculturezone zone4 = new Aquaculturezone("fish zone" , 30.0 , 42.0);
+        ManageZones.AddZone(zone4);
+        
+        WaterSensor ws = new WaterSensor(zone4 , 12 , 13.2);
+
+        ManageSensors.addSensor(SensorType.waterSensor , ws);
+        ManageSensors.displayDashboardOfSensor(ws);
+
+        ws.sendReading();
+        
+
 
        // Geographicalzone[] zones = new Geographicalzone[5];
         /*zones[0] = new Cropszone("potato zone" , 56.5 , 42.75);
@@ -37,15 +47,13 @@ public class main {
         zones[2] = new Poultry("poultry 1 zone" , 50.0 , 62.0);
         zones[3] = new Ruminates("ruminate 1 zone" , 51.2 , 36.7);
         zones[4] = new Aquaculturezone("fishs zone" , 46 , 96.7);
-<<<<<<< HEAD
 
         ((Cropszone) zones[0]).addcrop(new Crop("12-09-2025" , "06-07-2026"));
         Cropszone zone1 = (Cropszone) zones[0];
         zone1.displayOverView();
-=======
 */
 
-
+        System.out.println("\n\nFINISH !");
     }
 
     
