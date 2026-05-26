@@ -23,6 +23,11 @@ public abstract class Geographicalzone {
     this.record = new ProductionRecord();
     //zones.add(this);
   }
+
+  public ZoneType getType(){
+    return type;
+  }
+
   public void editzone(String name , double L , double l){
     this.name = name;
     longitude = L;

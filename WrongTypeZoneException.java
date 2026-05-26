@@ -1,0 +1,1 @@
+public class WrongTypeZoneException extends Exception{}

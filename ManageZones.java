@@ -16,7 +16,7 @@ public static List<Geographicalzone> getZones(){
     }
 
     static public void AddZone(ZoneType type , String name , double L , double l){
-        
+
         switch(type){
             case aquaculturezone :
                 zones.add(new Aquaculturezone(name , L , l));
@@ -38,6 +38,30 @@ public static List<Geographicalzone> getZones(){
     }
 
 
+    public void addCrop(Cropszone zone , Crop c){
+        zone.addCrop(c);
+    }
+
+    public void addAnimal(Geographicalzone zone , Animal animal) throws WrongTypeZoneException , WrongAnimalSpecieException{
+
+        switch(zone.getType()){
+            
+            case Poultryzone :
+                ((Poultryzone) zone).addAnimal(animal);
+                break;
+
+            case ruminateszone :
+                ((Ruminateszone) zone).addAnimal(animal);
+                break;
+
+            case aquaculturezone :
+                ((Aquaculturezone) zone).addAnimal(animal);
+                break;
+                
+            default : 
+                throw new WrongTypeZoneException();
+            }
+    }
 
     static public void editZone(Geographicalzone zone , String name){
         zone.edit(name);
