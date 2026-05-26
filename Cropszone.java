@@ -70,10 +70,10 @@ public class Cropszone extends Geographicalzone{
 
   public void displayOverView(){
     System.out.println("Zone #"+ getCode() );
-    System.out.println("Status : " + status.toString());
-    System.out.println("Number of enviromental sensors : " + envSensors.size());
-    System.out.println("Number of soil sensors : " + soilSensors.size());
-    System.out.println("Number of crop fields : " + crop_fields.size());
+    System.out.println("\tStatus : " + status.toString());
+    System.out.println("\tNumber of enviromental sensors : " + envSensors.size());
+    System.out.println("\tNumber of soil sensors : " + soilSensors.size());
+    System.out.println("\tNumber of crop fields : " + crop_fields.size());
   }
 
   public double getTotalCropYield(){

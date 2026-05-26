@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -45,7 +46,7 @@ public static List<Geographicalzone> getZones(){
     public void addAnimal(Geographicalzone zone , Animal animal) throws WrongTypeZoneException , WrongAnimalSpecieException{
 
         switch(zone.getType()){
-            
+
             case Poultryzone :
                 ((Poultryzone) zone).addAnimal(animal);
                 break;
@@ -71,9 +72,23 @@ public static List<Geographicalzone> getZones(){
         zone.edit(L , l);
     }
 
+    static public void editZone(Geographicalzone zone , String name , double L , double l){
+        zone.edit(name);
+        zone.edit(L , l);
+    }
+
+
 
     static public void deactivateZone(Geographicalzone zone){
         zone.deactivate();
+    }
+
+    public void displayOverviewAllZones(){
+        Iterator it = zones.iterator();
+        while(it.hasNext()){
+            Geographicalzone zone = (Geographicalzone) it.next();
+            zone.displayOverView();
+        }
     }
 
 
